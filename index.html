@@ -1695,19 +1695,6 @@
         // Dynamic footer year
         document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-        // Copy-email button
-        const copyEmailBtn = document.getElementById('copy-email-btn');
-        copyEmailBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            navigator.clipboard.writeText('bhoomic2305@gmail.com').then(() => {
-                copyEmailBtn.innerHTML = '<i class="fa-solid fa-check" style="color: var(--lime-accent);"></i>';
-                setTimeout(() => {
-                    copyEmailBtn.innerHTML = '<i class="fa-regular fa-copy"></i>';
-                }, 1800);
-            }).catch(() => {});
-        });
-
         // Scroll-spy: highlight the nav link for the section currently in view
         const navLinks = document.querySelectorAll('nav a[href^="#"]');
         const spySections = Array.from(navLinks)
